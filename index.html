@@ -1,176 +1,19 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Coding's Projects</title>
-  
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #fafafa;
-            --card-bg: #ffffff;
-            --text-main: #1a1a1a;
-            --text-muted: #666666;
-            --accent: #2563eb; 
-            --accent-light: #eff6ff;
-            --border: #e5e7eb;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        
-        header {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .profile-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 10px;
-        }
-
-        .profile-subtitle {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
-
-        .bio {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: justify;
-            text-align-last: center;
-        }
-
-        
-        .skills-section {
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            color: var(--text-main);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: 0;
-            width: 30px;
-            height: 3px;
-            background-color: var(--accent);
-            border-radius: 2px;
-        }
-
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: var(--accent-light);
-            color: var(--accent);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid rgba(37, 99, 235, 0.1);
-        }
-
-        
-        .projects-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project-card {
-            background-color: var(--card-bg);
+project-image-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 10px;
+            background-color: #f9fafb;
         }
 
-        .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-            border-color: rgba(37, 99, 235, 0.2);
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        .project-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
-        color: var(--text-muted);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        .project-desc {
-            font-size: 0.98rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        
         footer {
             margin-top: 60px;
             text-align: center;
@@ -180,7 +23,6 @@
             padding-top: 20px;
         }
 
-        
         @media (max-width: 600px) {
             body {
                 padding: 20px 15px;
@@ -189,56 +31,55 @@
                 font-size: 1.8rem;
             }
         }
-       .project-tech {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.8rem;
-            background-color: #f3f4f6;
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        
+        <!-- Header -->
         <header>
             <div class="profile-title">Yara</div>
             <div class="profile-subtitle">AI & Data Science Student</div>
             <p class="bio">
-                Welcome to my digital space. This space contains coding projects that I have built. All the projects in here are built with love by a girl who loves
-                coding so much, and she is learning every day.
+                Welcome to my digital space. This space contains coding projects that I have built. All the projects in here are built with love by a girl who loves coding so much, and she is learning every day.
             </p>
         </header>
 
-        
+        <!-- Skills Section -->
         <section class="skills-section">
-            <h2 class="section-title">The languages I use currently: </h2>
+            <h2 class="section-title">The languages I use currently:</h2>
             <div class="skills-grid">
                 <span class="skill-tag">HTML & CSS</span>
                 <span class="skill-tag">JavaScript</span>
             </div>
         </section>
 
-        
+        <!-- Projects Section -->
         <section>
-            <h2 class="section-title">My Projects: </h2>
+            <h2 class="section-title">My Projects:</h2>
             <div class="projects-list">
                 
-                <!-- مشروع 1 -->
+                <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-header">
                         <h3 class="project-name">Guess The Number Game</h3>
                         <span class="project-tech">HTML & CSS & JS</span>
                     </div>
                     <p class="project-desc">
-                         
+                        A fun interactive web game where the user tries to guess a randomly generated number with dynamic feedback and score tracking.
                     </p>
-                    <a href="https://github.com" class="project-link">https://github.com/ya-2005/yarak.github.io/tree/main/guess%20the%20num</a>
+                    
+                    
+                    <div class="project-image-container">
+                        <img src="guess.png" alt="Guess The Number Game Preview" class="project-image">
+                    </div>
                 </div>
 
-                
+            </div>
         </section>
 
-        
+        <!-- Footer -->
         <footer>
             All rights reserved | By Yara
         </footer>
@@ -247,5 +88,3 @@
 
 </body>
 </html>
-
-       
